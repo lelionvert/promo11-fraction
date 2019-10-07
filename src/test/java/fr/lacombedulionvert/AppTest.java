@@ -14,21 +14,22 @@ import java.util.stream.IntStream;
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue() {
-        Assertions.assertThat(false).isTrue();
-    }
 
     @Test
-    public void additionResultIsZero()
+public void additionResultIsZero()
+{
+    Fraction f = new Fraction(0, 1);
+
+    Assertions.assertThat(f.add(f)).isEqualTo(0);
+}
+
+    @Test
+    public void additionResultIsOne()
     {
-        Fraction f = new Fraction(0, 1);
+        Fraction f0 = new Fraction(0, 1);
+        Fraction f1 = new Fraction(1, 1);
 
-        Assertions.assertThat(f.add(f)).isEqualTo(0);
+        Assertions.assertThat(f0.add(f1)).isEqualTo(1);
     }
-
 
 }
