@@ -18,7 +18,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        Assertions.assertThat(true).isTrue();
-        IntStream i;
+        Assertions.assertThat(false).isTrue();
     }
 }
