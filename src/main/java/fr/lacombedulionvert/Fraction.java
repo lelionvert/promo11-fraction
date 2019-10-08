@@ -8,8 +8,13 @@ public class Fraction {
         this.numerator = numerator;
     }
 
-    public int add(Fraction fraction) {
-        if(fraction.numerator == 1) return 1;
-        return 0;
+    public Fraction add(Fraction fraction) {
+        if(fraction.numerator == 1)
+            return new Fraction(1, 1);;
+        return new Fraction(0, 1);
+    }
+
+    public int getNumerator() {
+        return numerator;
     }
 }

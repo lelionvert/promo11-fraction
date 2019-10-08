@@ -20,10 +20,10 @@ public class AppTest {
         Fraction f = new Fraction(0, 1);
 
         // When
-        int result = f.add(f);
+        Fraction result = f.add(f);
 
         // Then
-        Assertions.assertThat(result).isEqualTo(0);
+        Assertions.assertThat(result.getNumerator()).isEqualTo(0);
     }
 
     @Test
@@ -33,10 +33,23 @@ public class AppTest {
         Fraction f1 = new Fraction(1, 1);
 
         // When
-        int result = f0.add(f1);
+        Fraction result = f0.add(f1);
 
         // Then
-        Assertions.assertThat(result).isEqualTo(1);
+        Assertions.assertThat(result.getNumerator()).isEqualTo(1);
     }
 
+    /*Test
+    public void additionResultIs3_2() {
+        // Given
+        Fraction f1_2 = new Fraction(1, 2);
+        Fraction f1 = new Fraction(1, 1);
+
+        // When
+        Fraction result = f1_2.add(f1);
+
+        // Then
+        Fraction f3_2 = new Fraction(3, 2);
+        Assertions.assertThat(result).isEqualTo(f3_2);
+    }*/
 }
