@@ -12,24 +12,31 @@ import java.util.stream.IntStream;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
 
     @Test
-public void additionResultIsZero()
-{
-    Fraction f = new Fraction(0, 1);
+    public void additionResultIsZero() {
+        // Given
+        Fraction f = new Fraction(0, 1);
 
-    Assertions.assertThat(f.add(f)).isEqualTo(0);
-}
+        // When
+        int result = f.add(f);
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(0);
+    }
 
     @Test
-    public void additionResultIsOne()
-    {
+    public void additionResultIsOne() {
+        // Given
         Fraction f0 = new Fraction(0, 1);
         Fraction f1 = new Fraction(1, 1);
 
-        Assertions.assertThat(f0.add(f1)).isEqualTo(1);
+        // When
+        int result = f0.add(f1);
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(1);
     }
 
 }
