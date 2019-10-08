@@ -9,12 +9,7 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (fraction.numerator == 1)
-            return new Fraction(1, 1);
-        if (fraction.numerator == 2)
-            return new Fraction(5, 1);
-
-        return new Fraction(0, 1);
+        return new Fraction(numerator + fraction.numerator, 1);
     }
 
     public int getNumerator() {

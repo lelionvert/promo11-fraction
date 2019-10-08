@@ -42,11 +42,11 @@ public class FractionTest {
     @Test
     public void add_3_and_2_equals_5() {
         // Given
-        Fraction f0 = new Fraction(3, 1);
-        Fraction f1 = new Fraction(2, 1);
+        Fraction f3 = new Fraction(3, 1);
+        Fraction f2 = new Fraction(2, 1);
 
         // When
-        Fraction result = f0.add(f1);
+        Fraction result = f3.add(f2);
 
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(5);
