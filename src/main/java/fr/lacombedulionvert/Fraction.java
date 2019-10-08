@@ -9,8 +9,6 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (this.numerator == 1 && fraction.numerator == 1)
-            return new Fraction(3, 2);
         if (fraction.numerator == 1)
             return new Fraction(1, 1);
         return new Fraction(0, 1);
@@ -18,9 +16,5 @@ public class Fraction {
 
     public int getNumerator() {
         return numerator;
-    }
-
-    public int getDenominator() {
-        return 2;
     }
 }

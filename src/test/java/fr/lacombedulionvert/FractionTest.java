@@ -39,18 +39,5 @@ public class FractionTest {
         Assertions.assertThat(result.getNumerator()).isEqualTo(1);
     }
 
-    @Test
-    public void add_1_on_2_and_1_on_1_equals_3_on_2() {
-        // Given
-        Fraction f1_2 = new Fraction(1, 2);
-        Fraction f1 = new Fraction(1, 1);
 
-        // When
-        Fraction result = f1_2.add(f1);
-
-        // Then
-        Fraction f3_2 = new Fraction(3, 2);
-        Assertions.assertThat(result.getNumerator()).isEqualTo(f3_2.getNumerator());
-        Assertions.assertThat(result.getDenominator()).isEqualTo(f3_2.getDenominator());
-    }
 }
