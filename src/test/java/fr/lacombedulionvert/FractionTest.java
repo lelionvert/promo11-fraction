@@ -12,10 +12,10 @@ import java.util.stream.IntStream;
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class FractionTest {
 
     @Test
-    public void additionResultIsZero() {
+    public void add_0_and_0_equals_0() {
         // Given
         Fraction f = new Fraction(0, 1);
 
@@ -27,7 +27,7 @@ public class AppTest {
     }
 
     @Test
-    public void additionResultIsOne() {
+    public void add_0_and_1_equals_1() {
         // Given
         Fraction f0 = new Fraction(0, 1);
         Fraction f1 = new Fraction(1, 1);
@@ -40,7 +40,7 @@ public class AppTest {
     }
 
     @Test
-    public void additionResultIs3_2() {
+    public void add_1_on_2_and_1_on_1_equals_3_on_2() {
         // Given
         Fraction f1_2 = new Fraction(1, 2);
         Fraction f1 = new Fraction(1, 1);
