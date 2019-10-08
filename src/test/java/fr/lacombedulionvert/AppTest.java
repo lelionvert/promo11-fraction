@@ -39,7 +39,7 @@ public class AppTest {
         Assertions.assertThat(result.getNumerator()).isEqualTo(1);
     }
 
-    /*Test
+    @Test
     public void additionResultIs3_2() {
         // Given
         Fraction f1_2 = new Fraction(1, 2);
@@ -50,6 +50,7 @@ public class AppTest {
 
         // Then
         Fraction f3_2 = new Fraction(3, 2);
-        Assertions.assertThat(result).isEqualTo(f3_2);
-    }*/
+        Assertions.assertThat(result.getNumerator()).isEqualTo(f3_2.getNumerator());
+        Assertions.assertThat(result.getDenominator()).isEqualTo(f3_2.getDenominator());
+    }
 }
