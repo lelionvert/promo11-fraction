@@ -98,7 +98,6 @@ public class FractionTest {
         );
     }
 
-
     @Test
     public void add_1_on_1_and_1_on_2_equals_3_on_2() {
         // Given / When
@@ -108,6 +107,18 @@ public class FractionTest {
         // Then
         Assertions.assertThat(result).isEqualTo(
                 new Fraction(3, 2)
+        );
+    }
+
+    @Test
+    public void add_1_on_2_and_1_on_10_equals_6_on_10() {
+        // Given / When
+        Fraction result = new Fraction(1, 2)
+                .add(new Fraction(1, 10));
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(
+                new Fraction(6, 10)
         );
     }
 }
