@@ -55,11 +55,11 @@ public class FractionTest {
     @Test
     public void add_1_on_2_and_3_on_2_equals_4_on_2() {
         // Given
-        Fraction f3 = new Fraction(1, 2);
-        Fraction f2 = new Fraction(3, 2);
+        Fraction f1_2 = new Fraction(1, 2);
+        Fraction f3_2 = new Fraction(3, 2);
 
         // When
-        Fraction result = f3.add(f2);
+        Fraction result = f1_2.add(f3_2);
 
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(4);
