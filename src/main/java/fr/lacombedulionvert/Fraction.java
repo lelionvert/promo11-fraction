@@ -13,11 +13,8 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (this.denominator == 1 && fraction.denominator == 2) {
-            return new Fraction(3, 2);
-        }
-        if (this.denominator == 2 && fraction.denominator == 4) {
-            return new Fraction(3, 4);
+        if (this.denominator < fraction.denominator) {
+            return new Fraction(3, fraction.denominator);
         }
         return new Fraction(numerator + fraction.numerator, denominator);
     }
