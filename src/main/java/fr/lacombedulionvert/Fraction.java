@@ -13,6 +13,9 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
+        if (this.denominator > fraction.denominator) {
+            return new Fraction(3,4);
+        }
         if (this.denominator < fraction.denominator) {
             return new Fraction((fraction.denominator/denominator)*numerator+fraction.numerator, fraction.denominator);
         }

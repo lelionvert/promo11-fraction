@@ -121,4 +121,16 @@ public class FractionTest {
                 new Fraction(6, 10)
         );
     }
+
+    @Test
+    public void add_1_on_4_and_1_on_2_equals_3_on_4() {
+        // Given / When
+        Fraction result = new Fraction(1, 4)
+                .add(new Fraction(1, 2));
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(
+                new Fraction(3, 4)
+        );
+    }
 }
