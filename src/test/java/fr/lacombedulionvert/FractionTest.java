@@ -24,6 +24,8 @@ public class FractionTest {
 
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(0);
+        Assertions.assertThat(result.getDenominator()).isEqualTo(1);
+
     }
 
     @Test
@@ -37,6 +39,8 @@ public class FractionTest {
 
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(1);
+        Assertions.assertThat(result.getDenominator()).isEqualTo(1);
+
     }
 
     @Test
@@ -50,6 +54,8 @@ public class FractionTest {
 
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(5);
+        Assertions.assertThat(result.getDenominator()).isEqualTo(1);
+
     }
 
     @Test
