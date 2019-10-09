@@ -97,4 +97,17 @@ public class FractionTest {
                 new Fraction(3, 4)
         );
     }
+
+
+    @Test
+    public void add_1_on_1_and_1_on_2_equals_3_on_2() {
+        // Given / When
+        Fraction result = new Fraction(1, 1)
+                .add(new Fraction(1, 2));
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(
+                new Fraction(3, 2)
+        );
+    }
 }
