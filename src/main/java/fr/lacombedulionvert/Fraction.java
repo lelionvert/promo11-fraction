@@ -13,11 +13,12 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (this.denominator > fraction.denominator) {
-            return new Fraction((denominator/fraction.denominator)*fraction.numerator+numerator, this.denominator);
-        }
-        if (this.denominator < fraction.denominator) {
-            return new Fraction((fraction.denominator/denominator)*numerator+fraction.numerator, fraction.denominator);
+        Fraction maxFraction = this.denominator > fraction.denominator ? this : fraction;
+        Fraction minFraction = this.denominator < fraction.denominator ? this : fraction;
+        if (this.denominator != fraction.denominator) {
+            return new Fraction((maxFraction.denominator / minFraction.denominator)
+                    * minFraction.numerator + maxFraction.numerator,
+                    maxFraction.denominator);
         }
         return new Fraction(numerator + fraction.numerator, denominator);
     }
