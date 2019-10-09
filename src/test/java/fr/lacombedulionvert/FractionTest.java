@@ -86,7 +86,7 @@ public class FractionTest {
         Assertions.assertThat(result.getDenominator()).isEqualTo(5);
     }
 
-    /*@Test
+    @Test
     public void add_1_on_3_and_1_on_3_equals_2_on_3() {
         // Given
         Fraction f1_3 = new Fraction(1, 3);
@@ -97,6 +97,6 @@ public class FractionTest {
         // Then
         Assertions.assertThat(result.getNumerator()).isEqualTo(2);
         Assertions.assertThat(result.getDenominator()).isEqualTo(3);
-    }*/
+    }
 
 }

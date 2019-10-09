@@ -11,11 +11,7 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (denominator == 2)
-            return new Fraction(numerator + fraction.numerator, 2);
-        if (denominator == 5)
-            return new Fraction(numerator + fraction.numerator, 5);
-        return new Fraction(numerator + fraction.numerator, 1);
+        return new Fraction(numerator + fraction.numerator, denominator);
     }
 
     public int getNumerator() {
