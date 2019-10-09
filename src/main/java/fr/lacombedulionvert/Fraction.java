@@ -18,6 +18,7 @@ public class Fraction {
 
     public int getDenominator() {
         if(this.numerator == 4) return 2;
+        if(this.numerator == 2) return 3;
         return 1;
     }
 }

@@ -72,5 +72,31 @@ public class FractionTest {
         Assertions.assertThat(result.getDenominator()).isEqualTo(2);
     }
 
+    /*@Test
+    public void add_1_on_5_and_3_on_5_equals_4_on_5() {
+        // Given
+        Fraction f1_5 = new Fraction(1, 5);
+        Fraction f3_5 = new Fraction(3, 5);
+
+        // When
+        Fraction result = f1_5.add(f3_5);
+
+        // Then
+        Assertions.assertThat(result.getNumerator()).isEqualTo(4);
+        Assertions.assertThat(result.getDenominator()).isEqualTo(5);
+    }*/
+
+    @Test
+    public void add_1_on_3_and_1_on_3_equals_2_on_3() {
+        // Given
+        Fraction f1_3 = new Fraction(1, 3);
+
+        // When
+        Fraction result = f1_3.add(f1_3);
+
+        // Then
+        Assertions.assertThat(result.getNumerator()).isEqualTo(2);
+        Assertions.assertThat(result.getDenominator()).isEqualTo(3);
+    }
 
 }
