@@ -157,7 +157,7 @@ public class FractionTest {
                 new Fraction(7, 10)
         );
     }
-    
+
     @Test
     public void add_1_on_3_and_1_on_2_equals_5_on_6() {
         // Given / When
@@ -167,6 +167,18 @@ public class FractionTest {
         // Then
         Assertions.assertThat(result).isEqualTo(
                 new Fraction(5, 6)
+        );
+    }
+
+    @Test
+    public void add_1_on_5_and_1_on_7_equals_12_on_35() {
+        // Given / When
+        Fraction result = new Fraction(1, 5)
+                .add(new Fraction(1, 7));
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(
+                new Fraction(12, 35)
         );
     }
 }
