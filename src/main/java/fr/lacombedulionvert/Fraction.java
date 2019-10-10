@@ -13,19 +13,10 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (this.denominator % fraction.denominator != 0) {
-            if (this.denominator == 5 && fraction.denominator == 7)
-                return new Fraction(
-                        numerator * fraction.denominator + fraction.numerator * denominator,
-                        denominator * fraction.denominator);
-            if (this.denominator == 3 && fraction.denominator == 2)
-                return new Fraction(
-                        numerator * fraction.denominator + fraction.numerator * denominator,
-                        denominator * fraction.denominator);
-            if (this.denominator == 2 && fraction.denominator == 5)
-                return new Fraction(
-                        numerator * fraction.denominator + fraction.numerator * denominator,
-                        denominator * fraction.denominator);
+        if (this.denominator % fraction.denominator != 0 && fraction.denominator % this.denominator != 0) {
+            return new Fraction(
+                    numerator * fraction.denominator + fraction.numerator * denominator,
+                    denominator * fraction.denominator);
         }
         if (this.denominator > fraction.denominator) {
             int commonMultiple = denominator / fraction.denominator;
