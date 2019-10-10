@@ -13,14 +13,17 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        Fraction maxFraction = this.denominator > fraction.denominator ? this : fraction;
-        Fraction minFraction = this.denominator < fraction.denominator ? this : fraction;
-        if (this.denominator != fraction.denominator) {
-            return new Fraction((maxFraction.denominator / minFraction.denominator)
-                    * minFraction.numerator + maxFraction.numerator,
-                    maxFraction.denominator);
-        }
-        return new Fraction(numerator + fraction.numerator, denominator);
+        Fraction fractionWithMaxDenominator = this.denominator >= fraction.denominator ? this : fraction;
+        Fraction fractionWithMinDenominator = this.denominator < fraction.denominator ? this : fraction;
+        return new Fraction(
+                crossProductNumerator(fractionWithMaxDenominator, fractionWithMinDenominator)
+                        + fractionWithMaxDenominator.numerator,
+                fractionWithMaxDenominator.denominator);
+    }
+
+    private int crossProductNumerator(Fraction fractionWithMaxDenominator, Fraction fractionWithMinDenominator) {
+        return (fractionWithMaxDenominator.denominator / fractionWithMinDenominator.denominator)
+                * fractionWithMinDenominator.numerator;
     }
 
     public int getNumerator() {
