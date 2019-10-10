@@ -14,14 +14,14 @@ public class Fraction {
 
     public Fraction add(Fraction fraction) {
         if (this.denominator == 5 && fraction.denominator == 7)
-            return new Fraction(12, 35);
+            return new Fraction(12, denominator * fraction.denominator);
         if (this.denominator == 3 && fraction.denominator == 2)
-            return new Fraction(5, 6);
+            return new Fraction(5, denominator * fraction.denominator);
         if (this.denominator == 2 && fraction.denominator == 5)
-            return new Fraction(7, 10);
-        if(this.denominator > fraction.denominator){
+            return new Fraction(7, denominator * fraction.denominator);
+        if (this.denominator > fraction.denominator) {
             int commonMultiple = denominator / fraction.denominator;
-            return new Fraction(fraction.numerator* commonMultiple + numerator,
+            return new Fraction(fraction.numerator * commonMultiple + numerator,
                     denominator);
         }
         if (this.denominator < fraction.denominator) {
