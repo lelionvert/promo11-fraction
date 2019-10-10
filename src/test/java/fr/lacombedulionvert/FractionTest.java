@@ -145,4 +145,16 @@ public class FractionTest {
                 new Fraction(3, 4)
         );
     }
+
+    @Test
+    public void add_1_on_2_and_1_on_5_equals_7_on_10() {
+        // Given / When
+        Fraction result = new Fraction(1, 2)
+                .add(new Fraction(1, 5));
+
+        // Then
+        Assertions.assertThat(result).isEqualTo(
+                new Fraction(7, 10)
+        );
+    }
 }
