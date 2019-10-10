@@ -14,7 +14,7 @@ public class Fraction {
 
     public Fraction add(Fraction fraction) {
         if(this.denominator > fraction.denominator){
-            return new Fraction(3, 4);
+            return new Fraction(numerator+fraction.numerator*2, denominator);
         }
         if (this.denominator < fraction.denominator) {
             int commonMultiple = fraction.denominator / denominator;
