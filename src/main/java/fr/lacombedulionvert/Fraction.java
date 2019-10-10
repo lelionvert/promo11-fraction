@@ -18,14 +18,6 @@ public class Fraction {
                     denominator * fraction.denominator);
     }
 
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
-
     @Override
     public String toString() {
         return "Fraction{" +
