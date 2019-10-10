@@ -13,37 +13,9 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if(this.denominator == 4 && fraction.denominator == 2)
             return new Fraction(
                     numerator * fraction.denominator + fraction.numerator * denominator,
                     denominator * fraction.denominator);
-
-        if(this.denominator == 5 && fraction.denominator == 10)
-            return new Fraction(
-                    numerator * fraction.denominator + fraction.numerator * denominator,
-                    denominator * fraction.denominator);
-
-        if(this.denominator == 2 && fraction.denominator == 10)
-            return new Fraction(
-                    numerator * fraction.denominator + fraction.numerator * denominator,
-                    denominator * fraction.denominator);
-
-        if (this.denominator % fraction.denominator != 0 && fraction.denominator % this.denominator != 0) {
-            return new Fraction(
-                    numerator * fraction.denominator + fraction.numerator * denominator,
-                    denominator * fraction.denominator);
-        }
-        if (this.denominator > fraction.denominator) {
-            int commonMultiple = denominator / fraction.denominator;
-            return new Fraction(fraction.numerator * commonMultiple + numerator,
-                    denominator);
-        }
-        if (this.denominator < fraction.denominator) {
-            int commonMultiple = fraction.denominator / denominator;
-            return new Fraction(numerator * commonMultiple + fraction.numerator,
-                    fraction.denominator);
-        }
-        return new Fraction(numerator + fraction.numerator, denominator);
     }
 
     public int getNumerator() {

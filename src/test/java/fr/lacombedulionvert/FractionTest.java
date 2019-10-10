@@ -51,50 +51,26 @@ public class FractionTest {
     }
 
     @Test
-    public void add_1_on_2_and_3_on_2_equals_4_on_2() {
+    public void add_1_on_2_and_3_on_2_equals_8_on_4() {
         // Given / When
         Fraction result = new Fraction(1, 2)
                 .add(new Fraction(3, 2));
 
         // Then
         Assertions.assertThat(result).isEqualTo(
-                new Fraction(4, 2)
+                new Fraction(8, 4)
         );
     }
 
     @Test
-    public void add_1_on_5_and_3_on_5_equals_4_on_5() {
-        // Given / When
-        Fraction result = new Fraction(1, 5)
-                .add(new Fraction(3, 5));
-
-        // Then
-        Assertions.assertThat(result).isEqualTo(
-                new Fraction(4, 5)
-        );
-    }
-
-    @Test
-    public void add_1_on_3_and_1_on_3_equals_2_on_3() {
-        // Given / When
-        Fraction result = new Fraction(1, 3)
-                .add(new Fraction(1, 3));
-
-        // Then
-        Assertions.assertThat(result).isEqualTo(
-                new Fraction(2, 3)
-        );
-    }
-
-    @Test
-    public void add_1_on_2_and_1_on_4_equals_3_on_4() {
+    public void add_1_on_2_and_1_on_4_equals_6_on_8() {
         // Given / When
         Fraction result = new Fraction(1, 2)
                 .add(new Fraction(1, 4));
 
         // Then
         Assertions.assertThat(result).isEqualTo(
-                new Fraction(3, 4)
+                new Fraction(6, 8)
         );
     }
 
